@@ -19,5 +19,14 @@
         $('#chat').html(JSON.stringify(result).replace(/,/g,",\n"));
       });
     </script>
+		<script>
+      $('#code').html($('#script').html())
+      $('#spreadsheet_url').html("<a href='"+url+"'>"+url+"</a>");
+      $('#iframe').attr("src",url);
+      $('input[name]').val(url);
+      if (url != sample_url){
+        $("div#links").append("<br/><a href='"+document.location.pathname+"'>Original Sample Spreadsheet</a>")
+      }
+    </script>
 	</body>
 </html>
